@@ -1,0 +1,404 @@
+=== Generated schedule for mksspi ===
+
+Method schedule
+---------------
+Method: subifc_io_mosi_outen
+Ready signal: True
+Conflict-free: subifc_io_mosi_outen,
+	       subifc_io_mosi_out,
+	       subifc_io_mosi_in,
+	       subifc_io_sclk_outen,
+	       subifc_io_sclk_out,
+	       subifc_io_sclk_in,
+	       subifc_io_miso_outen,
+	       subifc_io_miso_in,
+	       subifc_io_miso_out,
+	       subifc_io_ncs_outen,
+	       subifc_io_ncs_out,
+	       subifc_io_ncs_in,
+	       mav_read_req,
+	       mv_sb_sspi_interrupt
+Sequenced before: mav_write_req
+ 
+Method: subifc_io_mosi_out
+Ready signal: True
+Conflict-free: subifc_io_mosi_outen,
+	       subifc_io_mosi_out,
+	       subifc_io_mosi_in,
+	       subifc_io_sclk_outen,
+	       subifc_io_sclk_out,
+	       subifc_io_sclk_in,
+	       subifc_io_miso_outen,
+	       subifc_io_miso_in,
+	       subifc_io_miso_out,
+	       subifc_io_ncs_outen,
+	       subifc_io_ncs_out,
+	       subifc_io_ncs_in,
+	       mav_read_req
+Sequenced before (restricted): mav_write_req, mv_sb_sspi_interrupt
+ 
+Method: subifc_io_mosi_in
+Ready signal: True
+Conflict-free: subifc_io_mosi_outen,
+	       subifc_io_mosi_out,
+	       subifc_io_sclk_outen,
+	       subifc_io_sclk_out,
+	       subifc_io_sclk_in,
+	       subifc_io_miso_outen,
+	       subifc_io_miso_in,
+	       subifc_io_miso_out,
+	       subifc_io_ncs_outen,
+	       subifc_io_ncs_out,
+	       subifc_io_ncs_in,
+	       mav_read_req
+Sequenced before (restricted): mav_write_req, mv_sb_sspi_interrupt
+Conflicts: subifc_io_mosi_in
+ 
+Method: subifc_io_sclk_outen
+Ready signal: True
+Conflict-free: subifc_io_mosi_outen,
+	       subifc_io_mosi_out,
+	       subifc_io_mosi_in,
+	       subifc_io_sclk_outen,
+	       subifc_io_sclk_out,
+	       subifc_io_sclk_in,
+	       subifc_io_miso_outen,
+	       subifc_io_miso_in,
+	       subifc_io_miso_out,
+	       subifc_io_ncs_outen,
+	       subifc_io_ncs_out,
+	       subifc_io_ncs_in,
+	       mav_read_req,
+	       mv_sb_sspi_interrupt
+Sequenced before: mav_write_req
+ 
+Method: subifc_io_sclk_out
+Ready signal: True
+Conflict-free: subifc_io_mosi_outen,
+	       subifc_io_mosi_out,
+	       subifc_io_mosi_in,
+	       subifc_io_sclk_outen,
+	       subifc_io_sclk_out,
+	       subifc_io_sclk_in,
+	       subifc_io_miso_outen,
+	       subifc_io_miso_in,
+	       subifc_io_miso_out,
+	       subifc_io_ncs_outen,
+	       subifc_io_ncs_out,
+	       subifc_io_ncs_in,
+	       mav_read_req
+Sequenced before (restricted): mav_write_req, mv_sb_sspi_interrupt
+ 
+Method: subifc_io_sclk_in
+Ready signal: True
+Conflict-free: subifc_io_mosi_outen,
+	       subifc_io_mosi_out,
+	       subifc_io_mosi_in,
+	       subifc_io_sclk_outen,
+	       subifc_io_sclk_out,
+	       subifc_io_miso_outen,
+	       subifc_io_miso_in,
+	       subifc_io_miso_out,
+	       subifc_io_ncs_outen,
+	       subifc_io_ncs_out,
+	       subifc_io_ncs_in,
+	       mav_read_req
+Sequenced before (restricted): mav_write_req, mv_sb_sspi_interrupt
+Conflicts: subifc_io_sclk_in
+ 
+Method: subifc_io_miso_outen
+Ready signal: True
+Conflict-free: subifc_io_mosi_outen,
+	       subifc_io_mosi_out,
+	       subifc_io_mosi_in,
+	       subifc_io_sclk_outen,
+	       subifc_io_sclk_out,
+	       subifc_io_sclk_in,
+	       subifc_io_miso_outen,
+	       subifc_io_miso_in,
+	       subifc_io_miso_out,
+	       subifc_io_ncs_outen,
+	       subifc_io_ncs_out,
+	       subifc_io_ncs_in,
+	       mav_read_req,
+	       mv_sb_sspi_interrupt
+Sequenced before: mav_write_req
+ 
+Method: subifc_io_miso_in
+Ready signal: True
+Conflict-free: subifc_io_mosi_outen,
+	       subifc_io_mosi_out,
+	       subifc_io_mosi_in,
+	       subifc_io_sclk_outen,
+	       subifc_io_sclk_out,
+	       subifc_io_sclk_in,
+	       subifc_io_miso_outen,
+	       subifc_io_miso_out,
+	       subifc_io_ncs_outen,
+	       subifc_io_ncs_out,
+	       subifc_io_ncs_in,
+	       mav_read_req
+Sequenced before (restricted): mav_write_req, mv_sb_sspi_interrupt
+Conflicts: subifc_io_miso_in
+ 
+Method: subifc_io_miso_out
+Ready signal: True
+Conflict-free: subifc_io_mosi_outen,
+	       subifc_io_mosi_out,
+	       subifc_io_mosi_in,
+	       subifc_io_sclk_outen,
+	       subifc_io_sclk_out,
+	       subifc_io_sclk_in,
+	       subifc_io_miso_outen,
+	       subifc_io_miso_in,
+	       subifc_io_miso_out,
+	       subifc_io_ncs_outen,
+	       subifc_io_ncs_out,
+	       subifc_io_ncs_in,
+	       mav_read_req
+Sequenced before (restricted): mav_write_req, mv_sb_sspi_interrupt
+ 
+Method: subifc_io_ncs_outen
+Ready signal: True
+Conflict-free: subifc_io_mosi_outen,
+	       subifc_io_mosi_out,
+	       subifc_io_mosi_in,
+	       subifc_io_sclk_outen,
+	       subifc_io_sclk_out,
+	       subifc_io_sclk_in,
+	       subifc_io_miso_outen,
+	       subifc_io_miso_in,
+	       subifc_io_miso_out,
+	       subifc_io_ncs_outen,
+	       subifc_io_ncs_out,
+	       subifc_io_ncs_in,
+	       mav_read_req,
+	       mv_sb_sspi_interrupt
+Sequenced before: mav_write_req
+ 
+Method: subifc_io_ncs_out
+Ready signal: True
+Conflict-free: subifc_io_mosi_outen,
+	       subifc_io_mosi_out,
+	       subifc_io_mosi_in,
+	       subifc_io_sclk_outen,
+	       subifc_io_sclk_out,
+	       subifc_io_sclk_in,
+	       subifc_io_miso_outen,
+	       subifc_io_miso_in,
+	       subifc_io_miso_out,
+	       subifc_io_ncs_outen,
+	       subifc_io_ncs_out,
+	       subifc_io_ncs_in,
+	       mav_read_req
+Sequenced before (restricted): mav_write_req, mv_sb_sspi_interrupt
+ 
+Method: subifc_io_ncs_in
+Ready signal: True
+Conflict-free: subifc_io_mosi_outen,
+	       subifc_io_mosi_out,
+	       subifc_io_mosi_in,
+	       subifc_io_sclk_outen,
+	       subifc_io_sclk_out,
+	       subifc_io_sclk_in,
+	       subifc_io_miso_outen,
+	       subifc_io_miso_in,
+	       subifc_io_miso_out,
+	       subifc_io_ncs_outen,
+	       subifc_io_ncs_out,
+	       mav_read_req
+Sequenced before (restricted): mav_write_req, mv_sb_sspi_interrupt
+Conflicts: subifc_io_ncs_in
+ 
+Method: mav_write_req
+Ready signal: True
+Sequenced after: subifc_io_mosi_outen,
+		 subifc_io_sclk_outen,
+		 subifc_io_miso_outen,
+		 subifc_io_ncs_outen,
+		 mv_sb_sspi_interrupt
+Sequenced after (restricted): subifc_io_mosi_out,
+			      subifc_io_mosi_in,
+			      subifc_io_sclk_out,
+			      subifc_io_sclk_in,
+			      subifc_io_miso_in,
+			      subifc_io_miso_out,
+			      subifc_io_ncs_out,
+			      subifc_io_ncs_in,
+			      mav_read_req
+Conflicts: mav_write_req
+ 
+Method: mav_read_req
+Ready signal: True
+Conflict-free: subifc_io_mosi_outen,
+	       subifc_io_mosi_out,
+	       subifc_io_mosi_in,
+	       subifc_io_sclk_outen,
+	       subifc_io_sclk_out,
+	       subifc_io_sclk_in,
+	       subifc_io_miso_outen,
+	       subifc_io_miso_in,
+	       subifc_io_miso_out,
+	       subifc_io_ncs_outen,
+	       subifc_io_ncs_out,
+	       subifc_io_ncs_in
+Sequenced before (restricted): mav_write_req, mv_sb_sspi_interrupt
+Conflicts: mav_read_req
+ 
+Method: mv_sb_sspi_interrupt
+Ready signal: True
+Conflict-free: subifc_io_mosi_outen,
+	       subifc_io_sclk_outen,
+	       subifc_io_miso_outen,
+	       subifc_io_ncs_outen,
+	       mv_sb_sspi_interrupt
+Sequenced before: mav_write_req
+Sequenced after (restricted): subifc_io_mosi_out,
+			      subifc_io_mosi_in,
+			      subifc_io_sclk_out,
+			      subifc_io_sclk_in,
+			      subifc_io_miso_in,
+			      subifc_io_miso_out,
+			      subifc_io_ncs_out,
+			      subifc_io_ncs_in,
+			      mav_read_req
+ 
+Rule schedule
+-------------
+Rule: tx_fifo_ifc_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rx_fifo_ifc_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rl_mi_qualification
+Predicate: wr_spi_master_in.whas &&
+	   (rg_receive_state == 2'd2) && (! rg_miso_output_enable)
+Blocking rules: (none)
+ 
+Rule: rl_si_qualification
+Predicate: wr_spi_slave_in.whas &&
+	   (rg_receive_state == 2'd2) && (! rg_mosi_output_enable)
+Blocking rules: (none)
+ 
+Rule: rl_chip_select_control_master_mode
+Predicate: rg_ncs_output_enable
+Blocking rules: (none)
+ 
+Rule: rl_spi_clock_generator_master_mode
+Predicate: rg_sclk_output_enable
+Blocking rules: (none)
+ 
+Rule: rl_chip_select_control_slave_mode
+Predicate: wr_ncs_qual.whas && (! rg_ncs_output_enable)
+Blocking rules: (none)
+ 
+Rule: rl_spi_clock_generator_slave_mode
+Predicate: wr_sclk_qual.whas && (! rg_sclk_output_enable) && rg_spi_en
+Blocking rules: (none)
+ 
+Rule: rl_tx_fifo_threshold_updates
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rl_rx_fifo_threshold_updates
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rl_transfer_data_from_txreg_to_txfifo
+Predicate: rg_txdata_to_txfifo
+Blocking rules: (none)
+ 
+Rule: rl_transfer_data_from_rxfifo_to_rxreg
+Predicate: rg_rxfifo_to_rxdata
+Blocking rules: mav_read_req
+ 
+Rule: rl_set_up_time
+Predicate: (((rg_transmit_state == 2'd0) && (! (rg_total_bit_tx == 8'd0)) &&
+	     (! (rg_comm_mode == 2'b10))) ||
+	    ((rg_receive_state == 2'd0) && (! (rg_total_bit_rx == 8'd0)) &&
+	     (rg_comm_mode == 2'b10))) &&
+	   (! rg_ncs) &&
+	   rg_spi_en &&
+	   wr_write_en.whas && wr_write_en.wget &&
+	   (rg_set_up_count < rg_cs_t_delay)
+Blocking rules: (none)
+ 
+Rule: rl_transmit_idle_to_data_transfer
+Predicate: (! (tx_fifo_ifc_rDataCount == 6'd0)) &&
+	   (rg_transmit_state == 2'd0) &&
+	   (! (rg_total_bit_tx == 8'd0)) &&
+	   (! rg_ncs) &&
+	   rg_spi_en &&
+	   (rg_set_up_count == rg_cs_t_delay)
+Blocking rules: (none)
+ 
+Rule: rl_transmit_state
+Predicate: (rg_transmit_state == 2'd2) && (! rg_ncs) && rg_spi_en &&
+	   wr_write_en.whas && wr_write_en.wget
+Blocking rules: (none)
+ 
+Rule: rl_receive_idle_to_data_receive
+Predicate: wr_write_en.whas && wr_write_en.wget &&
+	   (! (rx_fifo_ifc_rDataAvail == 6'd0)) &&
+	   (rg_receive_state == 2'd0) &&
+	   (! (rg_total_bit_rx == 8'd0)) &&
+	   ((! (rg_comm_mode == 2'b10)) || (rg_transmit_state == 2'd3)) &&
+	   (! rg_ncs) &&
+	   rg_spi_en &&
+	   ((! (rg_comm_mode == 2'b1)) || (rg_set_up_count == rg_cs_t_delay))
+Blocking rules: rl_set_up_time
+ 
+Rule: rl_receive_state
+Predicate: wr_spi_in_qual.whas &&
+	   (rg_receive_state == 2'd2) && wr_read_en.whas && wr_read_en.wget &&
+	   (! rg_ncs) &&
+	   rg_spi_en
+Blocking rules: (none)
+ 
+Rule: rl_abort_condition
+Predicate: rg_spi_en &&
+	   ((((rg_comm_mode == 2'b10) || (rg_comm_mode == 2'b11)) &&
+	     (rg_transmit_state == 2'd3) &&
+	     (rg_receive_state == 2'd3)) ||
+	    ((rg_comm_mode == 2'b0) && (rg_transmit_state == 2'd3)) ||
+	    ((rg_comm_mode == 2'b1) && (rg_receive_state == 2'd3)))
+Blocking rules: (none)
+ 
+Logical execution order: subifc_io_mosi_outen,
+			 subifc_io_mosi_out,
+			 subifc_io_mosi_in,
+			 subifc_io_sclk_outen,
+			 subifc_io_sclk_out,
+			 subifc_io_sclk_in,
+			 subifc_io_miso_outen,
+			 subifc_io_miso_in,
+			 subifc_io_miso_out,
+			 subifc_io_ncs_outen,
+			 subifc_io_ncs_out,
+			 subifc_io_ncs_in,
+			 mav_read_req,
+			 rl_mi_qualification,
+			 rl_si_qualification,
+			 rl_spi_clock_generator_master_mode,
+			 rl_spi_clock_generator_slave_mode,
+			 rl_tx_fifo_threshold_updates,
+			 rl_rx_fifo_threshold_updates,
+			 rl_transfer_data_from_txreg_to_txfifo,
+			 rl_transfer_data_from_rxfifo_to_rxreg,
+			 rl_set_up_time,
+			 rl_chip_select_control_master_mode,
+			 rl_chip_select_control_slave_mode,
+			 rl_transmit_idle_to_data_transfer,
+			 rl_transmit_state,
+			 rl_receive_idle_to_data_receive,
+			 rl_receive_state,
+			 mv_sb_sspi_interrupt,
+			 rl_abort_condition,
+			 mav_write_req,
+			 tx_fifo_ifc_update,
+			 rx_fifo_ifc_update
+
+===========================================

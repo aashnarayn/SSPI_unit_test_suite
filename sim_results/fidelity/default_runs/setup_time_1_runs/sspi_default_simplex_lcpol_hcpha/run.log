@@ -1,0 +1,58 @@
+================================================================
+ SSPI RTL testbench - modelled on GCSDK sspi_simplex_tx.c
+   roles       : master=SIMPLEX_TX  slave=SIMPLEX_RX
+   nbytes      : 8  (64 bits total)
+   cpol / cpha : 0 / 1
+   bit order   : MSB_FIRST
+   prescale    : 243  (bit period 244 cycles)
+   setup/hold  : 1 / 0
+   settle wait : 32120 cycles
+================================================================
+                 120 master comm_status=04 fifo_status=11
+                 130 slave  comm_status=04 fifo_status=11
+                 140 cfg slave : clk=000007ce comm=01000000 ok=11
+                 150 cfg master: clk=000007ce comm=02c00001 ok=11
+                 160 BF fill : slave fifo=11  master fifo=11
+                 170 master data_tx[0] <= 01 ok=1
+                 220 master data_tx[1] <= 02 ok=1
+                 270 master data_tx[2] <= 03 ok=1
+                 320 master data_tx[3] <= 04 ok=1
+                 370 master data_tx[4] <= 05 ok=1
+                 420 master data_tx[5] <= 06 ok=1
+                 470 master data_tx[6] <= 07 ok=1
+                 520 master data_tx[7] <= 08 ok=1
+                 590 AF fill : master fifo=12 comm=0c
+                 600 slave  tx_rx_length(0,64): comm=01100000 ok=1
+                 610 slave  comm_mode(SIMPLEX_RX): comm=01100010 ok=1
+                 620 slave  enable_txrx(ENABLE) : comm=01100012 ok=1
+                 630 master tx_rx_length(64,0): comm=02c01001 ok=1
+                 640 master comm_mode(SIMPLEX_TX): comm=02c01001 ok=1
+                 650 master enable_txrx(ENABLE) : comm=02c01003 ok=1
+              321870 slave comm_status=05 fifo_status=11 (RXNE=1 BUSY=1)
+              321880 Read req RX temp_size = 1 ; rx_fifo count =  0; data = 00000000;
+              321880 slave data_rx[0] read FAILED (succ=0)
+              321930 Read req RX temp_size = 1 ; rx_fifo count =  0; data = 00000000;
+              321930 slave data_rx[1] read FAILED (succ=0)
+              321980 Read req RX temp_size = 1 ; rx_fifo count =  0; data = 00000000;
+              321980 slave data_rx[2] read FAILED (succ=0)
+              322030 Read req RX temp_size = 1 ; rx_fifo count =  0; data = 00000000;
+              322030 slave data_rx[3] read FAILED (succ=0)
+              322080 Read req RX temp_size = 1 ; rx_fifo count =  0; data = 00000000;
+              322080 slave data_rx[4] read FAILED (succ=0)
+              322130 Read req RX temp_size = 1 ; rx_fifo count =  0; data = 00000000;
+              322130 slave data_rx[5] read FAILED (succ=0)
+              322180 Read req RX temp_size = 1 ; rx_fifo count =  0; data = 00000000;
+              322180 slave data_rx[6] read FAILED (succ=0)
+              322230 Read req RX temp_size = 1 ; rx_fifo count =  0; data = 00000000;
+              322230 slave data_rx[7] read FAILED (succ=0)
+ SSPI READ VALUES (receiving instance)
+   rx[0]: 00   sent: 01   MISMATCH
+   rx[1]: 00   sent: 02   MISMATCH
+   rx[2]: 00   sent: 03   MISMATCH
+   rx[3]: 00   sent: 04   MISMATCH
+   rx[4]: 00   sent: 05   MISMATCH
+   rx[5]: 00   sent: 06   MISMATCH
+   rx[6]: 00   sent: 07   MISMATCH
+   rx[7]: 00   sent: 08   MISMATCH
+ 8 of 8 bytes mismatched
+TEST FAILED

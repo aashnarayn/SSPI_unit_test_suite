@@ -1,0 +1,23 @@
+`define TXFIFO_DEPTH 20
+
+`ifdef sspi_clk_gate_en
+`define sspi_clk_gate_loc_rst_en 
+`endif
+`ifdef sspi_loc_rst_en
+`define sspi_clk_gate_loc_rst_en 
+`endif
+`define Communication_control	'h00
+`define Clock_control			'h04
+`define TX_data_rg				'h08
+`define RX_data_rg				'h0C
+`define Interrupt_enable		'h10
+`define FIFO_status				'h14
+`define	Communication_status	'h18
+`ifdef IQC
+    `define Input_qualification		'h1C
+`endif
+`ifdef sspi_clk_gate_loc_rst_en
+`define	SPI_Clk_En     'h20
+`endif
+`define Delay_config   'h24
+`define FIFO_Count     'h28 //16-bit FIFO Count register  

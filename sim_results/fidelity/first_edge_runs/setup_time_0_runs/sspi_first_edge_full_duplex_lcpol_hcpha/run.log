@@ -1,0 +1,45 @@
+================================================================
+ SSPI loopback testbench - FULL_DUPLEX, MOSI shorted to MISO
+   models     : sspi_full_duplex.c / sspi_MSB_check.c / sspi_LSB_check.c
+   nbytes     : 8  (64 bits each way)
+   cpol / cpha: 0 / 1
+   bit order  : MSB_FIRST
+   prescale   : 243  (bit period 244 cycles)
+   setup/hold : 0 / 0
+   settle wait: 31632 cycles
+================================================================
+                 120 dut comm_status=04 fifo_status=11
+                 130 cfg dut : clk=000003ce comm=02c00001 ok=11
+                 140 BF fill : fifo=11
+                 150 dut data_tx[0] <= 01 ok=1
+                 200 dut data_tx[1] <= 02 ok=1
+                 250 dut data_tx[2] <= 03 ok=1
+                 300 dut data_tx[3] <= 04 ok=1
+                 350 dut data_tx[4] <= 05 ok=1
+                 400 dut data_tx[5] <= 06 ok=1
+                 450 dut data_tx[6] <= 07 ok=1
+                 500 dut data_tx[7] <= 08 ok=1
+                 560 AF fill : fifo=12 comm=0c
+                 570 dut tx_rx_length(64,64): comm=02d01001 ok=1
+                 580 dut comm_mode(FULL_DUPLEX): comm=02d01031 ok=1
+                 590 dut enable_txrx(ENABLE)  : comm=02d01033 ok=1
+              316930 dut comm_status=24 fifo_status=21 (RXNE=1 BUSY=0)
+              316940 Read req RX temp_size = 1 ; rx_fifo count =  8; data = 01010101;
+              316990 Read req RX temp_size = 1 ; rx_fifo count =  7; data = 02020202;
+              317040 Read req RX temp_size = 1 ; rx_fifo count =  6; data = 03030303;
+              317090 Read req RX temp_size = 1 ; rx_fifo count =  5; data = 04040404;
+              317140 Read req RX temp_size = 1 ; rx_fifo count =  4; data = 05050505;
+              317190 Read req RX temp_size = 1 ; rx_fifo count =  3; data = 06060606;
+              317240 Read req RX temp_size = 1 ; rx_fifo count =  2; data = 07070707;
+              317290 Read req RX temp_size = 1 ; rx_fifo count =  1; data = 08080808;
+ SSPI READ VALUES (loopback - should equal what was sent)
+   rx[0]: 01   sent: 01   ok
+   rx[1]: 02   sent: 02   ok
+   rx[2]: 03   sent: 03   ok
+   rx[3]: 04   sent: 04   ok
+   rx[4]: 05   sent: 05   ok
+   rx[5]: 06   sent: 06   ok
+   rx[6]: 07   sent: 07   ok
+   rx[7]: 08   sent: 08   ok
+ 0 of 8 bytes mismatched
+TEST PASSED

@@ -1,0 +1,89 @@
+/*
+================================================================================
+ sspi_tb_config.bsvi — shared configuration for every SSPI testbench
+================================================================================
+Included by each testbench in this folder so that one set of -D flags drives
+all of them. Every flag maps to a driver call or constant in
+GCSDK(or)trisoc_sdk/bsp/include/sspi.h defaults follow sspi_simplex_tx.c
+
+Also holds the two register-packing helpers, which encode the concatReg field
+order from sspi.bsv, and the TX byte pattern.
+================================================================================
+*/
+
+`ifndef TB_NBYTES
+  `define TB_NBYTES 8             // SSPI_SIZE          (max 31: total_bit is 8 bits)
+`endif
+`ifndef TB_DATA_SIZE
+  `define TB_DATA_SIZE 8          // DATA_SIZE, bits per byte
+`endif
+`ifndef TB_CPOL
+  `define TB_CPOL 0               // CLK_POLARITY_LOW / _HIGH
+`endif
+`ifndef TB_CPHA
+  `define TB_CPHA 0               // CLK_PHASE_LOW / _HIGH
+`endif
+`ifndef TB_LSB_FIRST
+  `define TB_LSB_FIRST 0          // MSB_FIRST / LSB_FIRST
+`endif
+`ifndef TB_SETUP
+  `define TB_SETUP 1              // SETUP_TIME_CYCLES -> cs_t_delay
+`endif
+`ifndef TB_HOLD
+  `define TB_HOLD 0               // HOLD_TIME_CYCLES  -> t_cs_delay
+`endif
+`ifndef TB_PRESCALE
+  // sspi_configure_clock_in_hz(): prescaler = CLOCK_FREQUENCY/bit_rate - 1,
+  // stored in a uint8_t. 50000000/100000 - 1 = 499, which TRUNCATES to 243.
+  // The runner script reproduces that truncation when given --bitrate.
+  `define TB_PRESCALE 243
+`endif
+`ifndef TB_GAP
+  `define TB_GAP 4                // idle cycles between successive DUT accesses
+`endif
+`ifndef TB_SEED
+  `define TB_SEED 1               // temp_data = 0x01
+`endif
+`ifndef TB_INCR
+  `define TB_INCR 1               // spi_tx[i] = temp_data + i
+`endif
+
+  typedef 32 MaxBytes;
+
+  // Per-byte TX data. The runner writes sspi_tb_data.bsvi and defines
+  // TB_DATA_FILE when given --data; otherwise the seed/increment pattern from
+  // the C testcase is used.
+`ifdef TB_DATA_FILE
+  `include "sspi_tb_data.bsvi"
+`else
+  function Vector#(MaxBytes, Bit#(8)) fn_tb_tx_data();
+    Vector#(MaxBytes, Bit#(8)) d = replicate(0);
+    for (Integer i = 0; i < valueOf(MaxBytes); i = i + 1)
+      d[i] = fromInteger(`TB_SEED) + fromInteger(i) * fromInteger(`TB_INCR);
+    return d;
+  endfunction
+`endif
+
+  // ---- Communication_control packing (concatReg12 in sspi.bsv, MSB first) --
+  //  [31:26] ro | [25] mosi_oe | [24] miso_oe | [23] ncs_oe | [22] sclk_oe
+  //  [21:14] total_bit_rx | [13:6] total_bit_tx | [5:4] comm_mode
+  //  [3] ro | [2] lsbfirst | [1] spi_en | [0] master_mode
+  function Bit#(32) fn_comm_ctrl(Bool is_master, Bit#(2) mode,
+                                 Bit#(8) rx_bits, Bit#(8) tx_bits,
+                                 bit lsb_first, bit spi_en);
+    bit mosi_oe = is_master ? 1 : 0;   // sspi_configure_pins(1,0,1,1) / (0,1,0,0)
+    bit miso_oe = is_master ? 0 : 1;
+    bit ncs_oe  = is_master ? 1 : 0;
+    bit sclk_oe = is_master ? 1 : 0;
+    return {6'd0, mosi_oe, miso_oe, ncs_oe, sclk_oe,
+            rx_bits, tx_bits, mode, 1'd0, lsb_first, spi_en,
+            is_master ? 1'b1 : 1'b0};
+  endfunction
+
+  // ---- Clock_control packing (concatReg6 in sspi.bsv, MSB first) ----------
+  //  [31:26] ro | [25:18] t_cs_delay | [17:10] cs_t_delay
+  //  [9:2] prescaller | [1] clk_phase | [0] clk_polarity
+  function Bit#(32) fn_clk_ctrl(Bit#(8) hold, Bit#(8) setup,
+                                Bit#(8) prescale, bit cpha, bit cpol);
+    return {6'd0, hold, setup, prescale, cpha, cpol};
+  endfunction

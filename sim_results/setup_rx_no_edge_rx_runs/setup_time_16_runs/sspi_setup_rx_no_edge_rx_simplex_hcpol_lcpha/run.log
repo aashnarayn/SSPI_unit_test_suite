@@ -1,0 +1,50 @@
+================================================================
+ SSPI RTL testbench - modelled on GCSDK sspi_simplex_tx.c
+   roles       : master=SIMPLEX_TX  slave=SIMPLEX_RX
+   nbytes      : 8  (64 bits total)
+   cpol / cpha : 1 / 0
+   bit order   : MSB_FIRST
+   prescale    : 243  (bit period 244 cycles)
+   setup/hold  : 16 / 0
+   settle wait : 39440 cycles
+================================================================
+                 120 master comm_status=04 fifo_status=11
+                 130 slave  comm_status=04 fifo_status=11
+                 140 cfg slave : clk=000043cd comm=01000000 ok=11
+                 150 cfg master: clk=000043cd comm=02c00001 ok=11
+                 160 BF fill : slave fifo=11  master fifo=11
+                 170 master data_tx[0] <= aa ok=1
+                 220 master data_tx[1] <= 55 ok=1
+                 270 master data_tx[2] <= 0f ok=1
+                 320 master data_tx[3] <= f0 ok=1
+                 370 master data_tx[4] <= 01 ok=1
+                 420 master data_tx[5] <= fe ok=1
+                 470 master data_tx[6] <= 69 ok=1
+                 520 master data_tx[7] <= 96 ok=1
+                 590 AF fill : master fifo=12 comm=0c
+                 600 slave  tx_rx_length(0,64): comm=01100000 ok=1
+                 610 slave  comm_mode(SIMPLEX_RX): comm=01100010 ok=1
+                 620 slave  enable_txrx(ENABLE) : comm=01100012 ok=1
+                 630 master tx_rx_length(64,0): comm=02c01001 ok=1
+                 640 master comm_mode(SIMPLEX_TX): comm=02c01001 ok=1
+                 650 master enable_txrx(ENABLE) : comm=02c01003 ok=1
+              395070 slave comm_status=24 fifo_status=21 (RXNE=1 BUSY=0)
+              395080 Read req RX temp_size = 1 ; rx_fifo count =  8; data = aaaaaaaa;
+              395130 Read req RX temp_size = 1 ; rx_fifo count =  7; data = 55555555;
+              395180 Read req RX temp_size = 1 ; rx_fifo count =  6; data = 0f0f0f0f;
+              395230 Read req RX temp_size = 1 ; rx_fifo count =  5; data = f0f0f0f0;
+              395280 Read req RX temp_size = 1 ; rx_fifo count =  4; data = 01010101;
+              395330 Read req RX temp_size = 1 ; rx_fifo count =  3; data = fefefefe;
+              395380 Read req RX temp_size = 1 ; rx_fifo count =  2; data = 69696969;
+              395430 Read req RX temp_size = 1 ; rx_fifo count =  1; data = 96969696;
+ SSPI READ VALUES (receiving instance)
+   rx[0]: aa   sent: aa   ok
+   rx[1]: 55   sent: 55   ok
+   rx[2]: 0f   sent: 0f   ok
+   rx[3]: f0   sent: f0   ok
+   rx[4]: 01   sent: 01   ok
+   rx[5]: fe   sent: fe   ok
+   rx[6]: 69   sent: 69   ok
+   rx[7]: 96   sent: 96   ok
+ 0 of 8 bytes mismatched
+TEST PASSED

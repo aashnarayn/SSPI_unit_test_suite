@@ -1,0 +1,21 @@
+verdict   : PASS
+date      : 2026-10-06 11:40:46
+rtl       : rtl/sspi.bsv (md5 dbe7db38)
+testbench : testbenches/sspi_loopback_tb.bsv
+cpol      : 1
+cpha      : 1
+lsb_first : 1
+nbytes    : 8
+data_size : 8
+prescale  : 243
+setup     : 1
+hold      : 0
+seed/incr : 1 / 1
+gap       : 4
+bsc flags : -D TB_NBYTES=8 -D TB_DATA_SIZE=8 -D TB_CPOL=1 -D TB_CPHA=1 -D TB_LSB_FIRST=1 -D TB_SETUP=1 -D TB_HOLD=0 -D TB_PRESCALE=243 -D TB_SEED=1 -D TB_INCR=1 -D TB_GAP=4
+
+reproduce :
+  ./run_sspi_tb.sh --rtl sspi_setup_rx_no_edge_rx.bsv --tb sspi_loopback_tb.bsv \
+      --cpol 1 --cpha 1 --lsb-first \
+      --nbytes 8 --prescale 243 --setup 1 --hold 0 \
+      --name fid_setup_rx_no_edge_rx_duplex_lsb_hcpol_hcpha_s1 --save --force

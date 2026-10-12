@@ -1,0 +1,45 @@
+================================================================
+ SSPI loopback testbench - FULL_DUPLEX, MOSI shorted to MISO
+   models     : sspi_full_duplex.c / sspi_MSB_check.c / sspi_LSB_check.c
+   nbytes     : 8  (64 bits each way)
+   cpol / cpha: 1 / 0
+   bit order  : MSB_FIRST
+   prescale   : 243  (bit period 244 cycles)
+   setup/hold : 32 / 0
+   settle wait: 47248 cycles
+================================================================
+                 120 dut comm_status=04 fifo_status=11
+                 130 cfg dut : clk=000083cd comm=02c00001 ok=11
+                 140 BF fill : fifo=11
+                 150 dut data_tx[0] <= aa ok=1
+                 200 dut data_tx[1] <= 55 ok=1
+                 250 dut data_tx[2] <= 0f ok=1
+                 300 dut data_tx[3] <= f0 ok=1
+                 350 dut data_tx[4] <= 01 ok=1
+                 400 dut data_tx[5] <= fe ok=1
+                 450 dut data_tx[6] <= 69 ok=1
+                 500 dut data_tx[7] <= 96 ok=1
+                 560 AF fill : fifo=12 comm=0c
+                 570 dut tx_rx_length(64,64): comm=02d01001 ok=1
+                 580 dut comm_mode(FULL_DUPLEX): comm=02d01031 ok=1
+                 590 dut enable_txrx(ENABLE)  : comm=02d01033 ok=1
+              473090 dut comm_status=24 fifo_status=21 (RXNE=1 BUSY=0)
+              473100 Read req RX temp_size = 1 ; rx_fifo count =  8; data = aaaaaaaa;
+              473150 Read req RX temp_size = 1 ; rx_fifo count =  7; data = 55555555;
+              473200 Read req RX temp_size = 1 ; rx_fifo count =  6; data = 0f0f0f0f;
+              473250 Read req RX temp_size = 1 ; rx_fifo count =  5; data = f0f0f0f0;
+              473300 Read req RX temp_size = 1 ; rx_fifo count =  4; data = 01010101;
+              473350 Read req RX temp_size = 1 ; rx_fifo count =  3; data = fefefefe;
+              473400 Read req RX temp_size = 1 ; rx_fifo count =  2; data = 69696969;
+              473450 Read req RX temp_size = 1 ; rx_fifo count =  1; data = 96969696;
+ SSPI READ VALUES (loopback - should equal what was sent)
+   rx[0]: aa   sent: aa   ok
+   rx[1]: 55   sent: 55   ok
+   rx[2]: 0f   sent: 0f   ok
+   rx[3]: f0   sent: f0   ok
+   rx[4]: 01   sent: 01   ok
+   rx[5]: fe   sent: fe   ok
+   rx[6]: 69   sent: 69   ok
+   rx[7]: 96   sent: 96   ok
+ 0 of 8 bytes mismatched
+TEST PASSED
