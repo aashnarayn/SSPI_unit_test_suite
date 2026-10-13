@@ -1,0 +1,21 @@
+verdict   : PASS
+date      : 2026-10-13 15:17:47
+rtl       : rtl/sspi.bsv (md5 dbe7db38)
+testbench : testbenches/sspi_half_duplex_tb.bsv
+cpol      : 0
+cpha      : 0
+lsb_first : 1
+nbytes    : 8
+data_size : 8
+prescale  : 243
+setup     : 0
+hold      : 0
+seed/incr : 1 / 1
+gap       : 4
+bsc flags : -D TB_NBYTES=8 -D TB_DATA_SIZE=8 -D TB_CPOL=0 -D TB_CPHA=0 -D TB_LSB_FIRST=1 -D TB_SETUP=0 -D TB_HOLD=0 -D TB_PRESCALE=243 -D TB_SEED=1 -D TB_INCR=1 -D TB_GAP=4 -D TB_DATA_FILE
+
+reproduce :
+  ./run_sspi_tb.sh --rtl sspi_setup_rx_no_edge_rx.bsv --tb sspi_half_duplex_tb.bsv \
+      --cpol 0 --cpha 0 --lsb-first \
+      --nbytes 8 --prescale 243 --setup 0 --hold 0 \
+      --name sspi_setup_rx_no_edge_rx_half_duplex_lsb_lcpol_lcpha --save --force

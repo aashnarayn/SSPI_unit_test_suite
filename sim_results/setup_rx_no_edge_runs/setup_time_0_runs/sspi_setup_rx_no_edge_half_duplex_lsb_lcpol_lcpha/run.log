@@ -1,0 +1,44 @@
+================================================================
+ SSPI HALF_DUPLEX testbench - modelled on GCSDK
+   sspi_half_duplex_LSB_check.c
+   roles       : master=HALF_DUPLEX  slave=FULL_DUPLEX
+   master      : tx 4 bytes, rx 4 bytes
+   slave       : tx=rx 8 bytes (both phases)
+   cpol / cpha : 0 / 0
+   bit order   : LSB_FIRST
+   prescale    : 243  (bit period 244 cycles)
+   setup/hold  : 0 / 0  (slave setup forced to 0)
+   settle wait : 31632 cycles
+================================================================
+                 120 master comm_status=04 fifo_status=11
+                 130 slave  comm_status=04 fifo_status=11
+                 140 cfg slave : clk=000003cc comm=01000004 ok=11 (setup forced 0)
+                 150 cfg master: clk=000003cc comm=02c00005 ok=11
+                 160 BF fill : slave fifo=11  master fifo=11
+                 170 slave  data_tx[0] <= a0  (filler) ok=1
+                 220 slave  data_tx[1] <= a1  (filler) ok=1
+                 270 slave  data_tx[2] <= a2  (filler) ok=1
+                 320 slave  data_tx[3] <= a3  (filler) ok=1
+                 370 slave  data_tx[4] <= 01  (response) ok=1
+                 420 slave  data_tx[5] <= fe  (response) ok=1
+                 470 slave  data_tx[6] <= 69  (response) ok=1
+                 520 slave  data_tx[7] <= 96  (response) ok=1
+                 580 master data_tx[0] <= aa ok=1
+                 630 master data_tx[1] <= 55 ok=1
+                 680 master data_tx[2] <= 0f ok=1
+                 730 master data_tx[3] <= f0 ok=1
+                 790 AF fill : slave fifo=12  master fifo=10
+                 800 slave  tx_rx_length(64,64): comm=01101004 ok=1
+                 810 slave  comm_mode(FULL_DUPLEX): comm=01101034 ok=1
+                 820 master tx_rx_length(32,32): comm=02c80805 ok=1
+                 830 master comm_mode(HALF_DUPLEX): comm=02c80825 ok=1
+                 840 slave  enable_txrx(ENABLE) : comm=01101036 ok=1
+                 850 master enable_txrx(ENABLE) : comm=02c80827 ok=1
+              317190 master comm_status=04 fifo_status=01 (RXNE=1 BUSY=0)
+              317200 Read req RX temp_size = 1 ; rx_fifo count =  4; data = 2cd3fc03;
+              317250 Read req RX temp_size = 1 ; rx_fifo count =  3; data = 002cd3fc;
+              317300 Read req RX temp_size = 1 ; rx_fifo count =  2; data = 00002cd3;
+              317350 Read req RX temp_size = 1 ; rx_fifo count =  1; data = 0000002c;
+              317410 slave  comm_status=03 fifo_status=01 (RXNE=0 BUSY=1)
+ Slave did not receive any data 
+TEST FAILED

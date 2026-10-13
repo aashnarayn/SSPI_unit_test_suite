@@ -1,0 +1,21 @@
+verdict   : FAIL
+date      : 2026-10-13 15:35:27
+rtl       : rtl/sspi.bsv (md5 934973a9)
+testbench : testbenches/sspi_half_duplex_tb.bsv
+cpol      : 0
+cpha      : 0
+lsb_first : 1
+nbytes    : 8
+data_size : 8
+prescale  : 243
+setup     : 1
+hold      : 0
+seed/incr : 1 / 1
+gap       : 4
+bsc flags : -D TB_NBYTES=8 -D TB_DATA_SIZE=8 -D TB_CPOL=0 -D TB_CPHA=0 -D TB_LSB_FIRST=1 -D TB_SETUP=1 -D TB_HOLD=0 -D TB_PRESCALE=243 -D TB_SEED=1 -D TB_INCR=1 -D TB_GAP=4 -D TB_DATA_FILE
+
+reproduce :
+  ./run_sspi_tb.sh --rtl sspi_first_edge.bsv --tb sspi_half_duplex_tb.bsv \
+      --cpol 0 --cpha 0 --lsb-first \
+      --nbytes 8 --prescale 243 --setup 1 --hold 0 \
+      --name sspi_first_edge_half_duplex_lsb_lcpol_lcpha --save --force

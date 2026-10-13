@@ -1,0 +1,433 @@
+##### sspi_default_half_duplex_msb_lcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_msb_lcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_msb_hcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_msb_hcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_lsb_lcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_lsb_lcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_lsb_hcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_lsb_hcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_msb_lcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_msb_lcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_msb_hcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_msb_hcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_lsb_lcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_lsb_lcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_lsb_hcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_default_half_duplex_lsb_hcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_msb_lcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_msb_lcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_msb_hcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_msb_hcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_lsb_lcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_lsb_lcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_lsb_hcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_lsb_hcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_msb_lcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_msb_lcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_msb_hcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_msb_hcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_lsb_lcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_lsb_lcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_lsb_hcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_first_edge_half_duplex_lsb_hcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_msb_lcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_msb_lcpol_hcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_msb_hcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_msb_hcpol_hcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_lsb_lcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_lsb_lcpol_hcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_lsb_hcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_lsb_hcpol_hcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_msb_lcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_msb_lcpol_hcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_msb_hcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_msb_hcpol_hcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_lsb_lcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_lsb_lcpol_hcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_lsb_hcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_half_duplex_lsb_hcpol_hcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_msb_lcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_msb_lcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_msb_hcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_msb_hcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_lsb_lcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_lsb_lcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_lsb_hcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_lsb_hcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_msb_lcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_msb_lcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_msb_hcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_msb_hcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_lsb_lcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_lsb_lcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_lsb_hcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_no_edge_rx_half_duplex_lsb_hcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_msb_lcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_msb_lcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_msb_hcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_msb_hcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_lsb_lcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_lsb_lcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_lsb_hcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_lsb_hcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_msb_lcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_msb_lcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_msb_hcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_msb_hcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_lsb_lcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_lsb_lcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_lsb_hcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_half_duplex_lsb_hcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_msb_lcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_msb_lcpol_hcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_msb_hcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_msb_hcpol_hcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_lsb_lcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_lsb_lcpol_hcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_lsb_hcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_lsb_hcpol_hcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_msb_lcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_msb_lcpol_hcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_msb_hcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_msb_hcpol_hcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_lsb_lcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_lsb_lcpol_hcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_lsb_hcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_no_edge_half_duplex_lsb_hcpol_hcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_msb_lcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_msb_lcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_msb_hcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_msb_hcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_lsb_lcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_lsb_lcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_lsb_hcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_lsb_hcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_msb_lcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_msb_lcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_msb_hcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_msb_hcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_lsb_lcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_lsb_lcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_lsb_hcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_half_duplex_lsb_hcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_msb_lcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_msb_lcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_msb_hcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_msb_hcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_lsb_lcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_lsb_lcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_lsb_hcpol_lcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_lsb_hcpol_hcpha (setup 0) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_msb_lcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_msb_lcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_msb_hcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_msb_hcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_lsb_lcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_lsb_lcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_lsb_hcpol_lcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_wr_en_no_edge_rx_half_duplex_lsb_hcpol_hcpha (setup 1) #####
+ Result   : PASS
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_msb_lcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_msb_lcpol_hcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_msb_hcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_msb_hcpol_hcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_lsb_lcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_lsb_lcpol_hcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_lsb_hcpol_lcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_lsb_hcpol_hcpha (setup 0) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_msb_lcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_msb_lcpol_hcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_msb_hcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_msb_hcpol_hcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_lsb_lcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_lsb_lcpol_hcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_lsb_hcpol_lcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### sspi_setup_rx_rd_en_half_duplex_lsb_hcpol_hcpha (setup 1) #####
+ Result   : FAIL
+────────────────────────────────────────────
+##### HALF DUPLEX ALL-RTL SWEEP COMPLETE #####

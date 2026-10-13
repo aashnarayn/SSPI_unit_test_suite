@@ -4,7 +4,7 @@
 ================================================================================
 Included by each testbench in this folder so that one set of -D flags drives
 all of them. Every flag maps to a driver call or constant in
-GCSDK(or)trisoc_sdk/bsp/include/sspi.h defaults follow sspi_simplex_tx.c
+GCSDK/bsp/include/sspi.h defaults follow sspi_simplex_tx.c
 
 Also holds the two register-packing helpers, which encode the concatReg field
 order from sspi.bsv, and the TX byte pattern.

@@ -4,7 +4,6 @@
 #
 # RTL-level test suite modelled on 
 # gc2025/hw/sim_scripts/run_sim.sh
-# trisoc/sim_scripts/run_sim.sh
 # These are script files used to perform the full simulation flow on a built 
 # simulation executable from running 'make build_sim' on these directories.
 # Script drives the SSPI(s) modelled on a set of C testcase on the SoC core;

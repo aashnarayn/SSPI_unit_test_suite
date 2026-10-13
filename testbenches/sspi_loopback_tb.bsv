@@ -14,7 +14,7 @@ instance receives back exactly what it transmits (loopback connection)
 The companion sspi_simplex_tb.bsv covers the other two, which use two
 cross-connected instances.
 
-NOTE - these testbenches are modelled on the C testcases in GCSDK and trisoc_sdk, meant to 
+NOTE - these testbenches are modelled on the C testcases in GCSDK, meant to 
 provide an rtl level verification of thee xact same behaviour. They have been built in the same
 structure as the C testcases, so the sequence of writes and reads is identical, and the same
 data is used (however this can be changed with the --data flag when running run_sspi_tb.sh)

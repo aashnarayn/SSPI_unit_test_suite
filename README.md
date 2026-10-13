@@ -3,7 +3,7 @@
 An RTL level testbench for the Shakti SSPI peripheral, built in Bluespec and run
 under Bluesim. It drives `mk_sspi` directly through its `Ifc_sspi` interface, so
 there is no core, fabric, pinmux or software image that causes a lot of delay and wait
-in the simulation setup in both gc2025 and trisoc
+in the simulation setup in both gc2025
 
 ## Why it exists
 
@@ -239,7 +239,7 @@ This is a read path quirk, not a difference in what was transmitted.
 
 NOTE: 2 additional testcases were created but not yet committed inside the gitlab SDK repos
 They are meant to test Half Duplex behaviour of SSPI. We have included them in `application_examples/`
-and we have tested them in trisoc and gc2025 simulation setup successfully, a testbench based on that 
+and we have tested them in gc2025 simulation setup successfully, a testbench based on that 
 model is yet to be created here. TODO
 
 These 2 applications are:

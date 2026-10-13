@@ -1,0 +1,67 @@
+================================================================
+ SSPI HALF_DUPLEX testbench - modelled on GCSDK
+   sspi_half_duplex_LSB_check.c
+   roles       : master=HALF_DUPLEX  slave=FULL_DUPLEX
+   master      : tx 4 bytes, rx 4 bytes
+   slave       : tx=rx 8 bytes (both phases)
+   cpol / cpha : 1 / 1
+   bit order   : LSB_FIRST
+   prescale    : 243  (bit period 244 cycles)
+   setup/hold  : 0 / 0  (slave setup forced to 0)
+   settle wait : 31632 cycles
+================================================================
+                 120 master comm_status=04 fifo_status=11
+                 130 slave  comm_status=04 fifo_status=11
+                 140 cfg slave : clk=000003cf comm=01000004 ok=11 (setup forced 0)
+                 150 cfg master: clk=000003cf comm=02c00005 ok=11
+                 160 BF fill : slave fifo=11  master fifo=11
+                 170 slave  data_tx[0] <= a0  (filler) ok=1
+                 220 slave  data_tx[1] <= a1  (filler) ok=1
+                 270 slave  data_tx[2] <= a2  (filler) ok=1
+                 320 slave  data_tx[3] <= a3  (filler) ok=1
+                 370 slave  data_tx[4] <= 01  (response) ok=1
+                 420 slave  data_tx[5] <= fe  (response) ok=1
+                 470 slave  data_tx[6] <= 69  (response) ok=1
+                 520 slave  data_tx[7] <= 96  (response) ok=1
+                 580 master data_tx[0] <= aa ok=1
+                 630 master data_tx[1] <= 55 ok=1
+                 680 master data_tx[2] <= 0f ok=1
+                 730 master data_tx[3] <= f0 ok=1
+                 790 AF fill : slave fifo=12  master fifo=10
+                 800 slave  tx_rx_length(64,64): comm=01101004 ok=1
+                 810 slave  comm_mode(FULL_DUPLEX): comm=01101034 ok=1
+                 820 master tx_rx_length(32,32): comm=02c80805 ok=1
+                 830 master comm_mode(HALF_DUPLEX): comm=02c80825 ok=1
+                 840 slave  enable_txrx(ENABLE) : comm=01101036 ok=1
+                 850 master enable_txrx(ENABLE) : comm=02c80827 ok=1
+              317190 master comm_status=04 fifo_status=01 (RXNE=1 BUSY=0)
+              317200 Read req RX temp_size = 1 ; rx_fifo count =  4; data = 9669fe01;
+              317250 Read req RX temp_size = 1 ; rx_fifo count =  3; data = 009669fe;
+              317300 Read req RX temp_size = 1 ; rx_fifo count =  2; data = 00009669;
+              317350 Read req RX temp_size = 1 ; rx_fifo count =  1; data = 00000096;
+              317410 slave  comm_status=24 fifo_status=21 (RXNE=1 BUSY=0)
+              317420 Read req RX temp_size = 1 ; rx_fifo count =  8; data = f00f55aa;
+              317470 Read req RX temp_size = 1 ; rx_fifo count =  7; data = fff00f55;
+              317520 Read req RX temp_size = 1 ; rx_fifo count =  6; data = fffff00f;
+              317570 Read req RX temp_size = 1 ; rx_fifo count =  5; data = fffffff0;
+              317620 Read req RX temp_size = 1 ; rx_fifo count =  4; data = ffffffff;
+              317670 Read req RX temp_size = 1 ; rx_fifo count =  3; data = 00ffffff;
+              317720 Read req RX temp_size = 1 ; rx_fifo count =  2; data = 0000ffff;
+              317770 Read req RX temp_size = 1 ; rx_fifo count =  1; data = 000000ff;
+ MASTER RECEIVED RESPONSE
+   master rx[0]: 01   expected: 01   ok
+   master rx[1]: fe   expected: fe   ok
+   master rx[2]: 69   expected: 69   ok
+   master rx[3]: 96   expected: 96   ok
+ SLAVE RECEIVED COMMAND
+   slave  rx[0]: aa   expected: aa   ok
+   slave  rx[1]: 55   expected: 55   ok
+   slave  rx[2]: 0f   expected: 0f   ok
+   slave  rx[3]: f0   expected: f0   ok
+ SLAVE TAIL (master's held MOSI during its receive phase)
+   slave  rx[4]: ff
+   slave  rx[5]: ff
+   slave  rx[6]: ff
+   slave  rx[7]: ff
+ 0 of 8 checked bytes mismatched
+TEST PASSED

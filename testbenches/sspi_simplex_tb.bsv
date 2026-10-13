@@ -33,7 +33,7 @@ The defaults below reproduce sspi_simplex_tx.c exactly:
               transmits on MOSI, comm_mode SIMPLEX_TX
   slave   <-> sspi_instance[3] (SSPIY) - receives on MOSI, comm_mode SIMPLEX_RX
 
-NOTE - these testbenches are modelled on the C testcases in GCSDK and trisoc_sdk, meant to 
+NOTE - these testbenches are modelled on the C testcases in GCSDK, meant to 
 provide an rtl level verification of thee xact same behaviour. They have been built in the same
 structure as the C testcases, so the sequence of writes and reads is identical, and the same
 data is used (however this can be changed with the --data flag when running run_sspi_tb.sh)
@@ -171,7 +171,7 @@ package sspi_simplex_tb;
 
     // pin level connection
     // Ifc_sspi_io is (*always_ready, always_enabled*), so every input method must
-    // be called every cycle. refer wiring in TbSoc.bsv in gc2025 or trisoc
+    // be called every cycle. refer wiring in TbSoc.bsv in gc2025
 
     // additional delay registers and rules for pipelining the sspi sclk and ncs 
     // from master to slave - used for debug
@@ -199,7 +199,7 @@ package sspi_simplex_tb;
       // slave.subifc_io.ncs_in0(d2_ncs);           // delayed by 2 cycles
       // slave.subifc_io.mosi_in(d2_mosi);          // delayed by 2 cycles
       slave.subifc_io.sclk_in(master.subifc_io.sclk_out);
-      slave.subifc_io.ncs_in0(master.subifc_io.nsc_out0);
+      slave.subifc_io.ncs_in0(master.subifc_io.ncs_out0);
       slave.subifc_io.mosi_in(master.subifc_io.mosi_out);
       slave.subifc_io.miso_in(master.subifc_io.miso_out);
       master.subifc_io.sclk_in(slave.subifc_io.sclk_out);
