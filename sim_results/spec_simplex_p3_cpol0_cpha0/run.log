@@ -1,0 +1,32 @@
+================================================================
+ SSPI RTL testbench - modelled on GCSDK sspi_simplex_tx.c
+   roles       : master=SIMPLEX_TX  slave=SIMPLEX_RX
+   nbytes      : 2  (16 bits total)
+   cpol / cpha : 0 / 0
+   bit order   : MSB_FIRST
+   prescale    : 3  (bit period 4 cycles)
+   setup/hold  : 1 / 0
+   settle wait : 536 cycles
+================================================================
+                 120 master comm_status=04 fifo_status=11
+                 130 slave  comm_status=04 fifo_status=11
+                 140 cfg slave : clk=0000040c comm=01000000 ok=11
+                 150 cfg master: clk=0000040c comm=02c00001 ok=11
+                 160 BF fill : slave fifo=11  master fifo=11
+                 170 master data_tx[0] <= aa ok=1
+                 220 master data_tx[1] <= 55 ok=1
+                 290 AF fill : master fifo=10 comm=04
+                 300 slave  tx_rx_length(0,16): comm=01040000 ok=1
+                 310 slave  comm_mode(SIMPLEX_RX): comm=01040010 ok=1
+                 320 slave  enable_txrx(ENABLE) : comm=01040012 ok=1
+                 330 master tx_rx_length(16,0): comm=02c00401 ok=1
+                 340 master comm_mode(SIMPLEX_TX): comm=02c00401 ok=1
+                 350 master enable_txrx(ENABLE) : comm=02c00403 ok=1
+                5730 slave comm_status=04 fifo_status=01 (RXNE=1 BUSY=0)
+                5740 Read req RX temp_size = 1 ; rx_fifo count =  2; data = aaaaaaaa;
+                5790 Read req RX temp_size = 1 ; rx_fifo count =  1; data = 55555555;
+ SSPI READ VALUES (receiving instance)
+   rx[0]: aa   sent: aa   ok
+   rx[1]: 55   sent: 55   ok
+ 0 of 2 bytes mismatched
+TEST PASSED
